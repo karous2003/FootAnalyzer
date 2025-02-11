@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>鞋墊測量系統</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .upload-form, .result-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #1a73e8;
+            margin-bottom: 30px;
+        }
+        .file-input {
+            margin: 20px 0;
+        }
+        .submit-btn {
+            background: #1a73e8;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background: #1557b0;
+        }
+        .result-data {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .result-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-form">
+        <h1>鞋墊測量系統</h1>
+        <!-- 修改 form 的 action 為 "/" -->
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="file-input">
+                <p>請選擇鞋墊照片：</p>
+                <input type="file" name="file" accept="image/*" required>
+            </div>
+            <div>
+                <input type="submit" value="上傳並分析" class="submit-btn">
+            </div>
+        </form>
+    </div>
+
+    <!-- 加入錯誤訊息顯示 -->
+    {% if error %}
+    <div class="error-message" style="color: red; text-align: center; margin: 20px 0;">
+        {{ error }}
+    </div>
+    {% endif %}
+
+    <!-- 修改結果顯示部分 -->
+    {% if result_data %}
+    <div class="result-section">
+        <h2>測量結果</h2>
+        <div class="result-data">
+            <p>鞋墊長度: {{ result_data.length_cm }} cm</p>
+            <p>前掌寬度: {{ result_data.forefoot_width_cm }} cm</p>
+            <p>中足寬度: {{ result_data.midfoot_width_cm }} cm</p>
+            <p>後跟寬度: {{ result_data.heel_width_cm }} cm</p>
+            <p>處理時間: {{ result_data.processing_time }} 秒</p>
+        </div>
+        
+        {% if image_url %}
+        <div class="result-image">
+            <h3>處理後圖片</h3>
+            <img src="{{ url_for('static', filename=image_url) }}" alt="處理後的鞋墊圖片">
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+</body>
+</html>
