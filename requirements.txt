@@ -1,12 +1,12 @@
 ﻿aiobotocore 
 aiohttp 
-aioitertools @ file:///tmp/build/80754af9/aioitertools_1607109665762/work
-aiosignal @ file:///tmp/build/80754af9/aiosignal_1637843061372/work
-alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
-altair @ file:///C:/b/abs_27reu1igbg/croot/altair_1687526066495/work
-anaconda-anon-usage @ file:///C:/b/abs_95v3x0wy8p/croot/anaconda-anon-usage_1697038984188/work
-anaconda-catalogs @ file:///C:/b/abs_8btyy0o8s8/croot/anaconda-catalogs_1685727315626/work
-anaconda-client @ file:///C:/b/abs_34txutm0ue/croot/anaconda-client_1708640705294/work
+aioitertools 
+aiosignal
+alabaster 
+altair 
+anaconda-anon-usage 
+anaconda-catalogs
+anaconda-client 
 anaconda-cloud-auth @ file:///C:/b/abs_410afndtyf/croot/anaconda-cloud-auth_1697462767853/work
 anaconda-navigator @ file:///C:/b/abs_cfvv8k_j21/croot/anaconda-navigator_1704813334508/work
 anaconda-project @ file:///C:/ci_311/anaconda-project_1676458365912/work
