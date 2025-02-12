@@ -1,10 +1,11 @@
 appdirs==1.4.4
 atomicwrites==1.4.0
-clyent==1.2.1
+clyent
+conda-repo-cli
 coloredlogs==15.0.1
 Django==1.11.9
 et-xmlfile==1.1.0
-Flask==2.0.3  
+Flask==2.0.3
 Flask-Uploads==0.2.1
 flatbuffers==24.12.23
 fonttools==4.25.0
@@ -32,5 +33,6 @@ python-lsp-jsonrpc==1.0.0
 rembg==2.0.61
 scipy==1.11.4
 twstock==1.4.0
+werkzeug==2.0.3
 webencodings==0.5.1
 zstandard==0.19.0
