@@ -12,7 +12,6 @@ gunicorn==23.0.0
 humanfriendly==10.0
 inflection==0.5.1
 jsonpointer==2.1
-mkl-service==2.4.0
 munkres==1.1.4
 onnxruntime==1.20.1
 opencv-python-headless==4.11.0.86  
